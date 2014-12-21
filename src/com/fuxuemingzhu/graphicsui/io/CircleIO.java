@@ -30,7 +30,7 @@ import com.fuxuemingzhu.graphicsui.entity.Circle;
  * 
  * @date 2014年12月18日 下午11:55:05
  */
-public class AnswerIO {
+public class CircleIO {
 	/**
 	 * path 文件路径字符串
 	 */
@@ -56,10 +56,10 @@ public class AnswerIO {
 	 * @param path
 	 * @param r
 	 */
-	public AnswerIO(String path, float r) {
+	public CircleIO(String path, float r) {
 		super();
-		AnswerIO.path = path;
-		AnswerIO.r = r;
+		CircleIO.path = path;
+		CircleIO.r = r;
 		circle = new Circle(r);
 	}
 

@@ -38,7 +38,7 @@ import com.fuxuemingzhu.graphicsui.entity.Circle;
  * 
  * @date 2014年12月18日 下午11:49:21
  */
-public class ShowAnswerAlert extends JFrame {
+public class CircleAnswerAlert extends JFrame {
 
 	/**
 	 * serialVersionUID
@@ -112,8 +112,8 @@ public class ShowAnswerAlert extends JFrame {
 	 * Description:构造方法
 	 * </p>
 	 */
-	public ShowAnswerAlert(float r) {
-		ShowAnswerAlert.r = r;
+	public CircleAnswerAlert(float r) {
+		CircleAnswerAlert.r = r;
 		circle = new Circle(r);
 		pnl_mian = new JPanel();
 		lbl_help = new JLabel();

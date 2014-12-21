@@ -9,7 +9,7 @@
  * @date 2014年12月18日  下午11:29:59
  * @version 1.0
  */
-package com.fuxuemingzhu.graphicsui.alerts;
+package com.fuxuemingzhu.graphicsui.draws;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -30,7 +30,7 @@ import javax.swing.JFrame;
  * 
  * @date 2014年12月18日 下午11:29:59
  */
-public class GraphicsDraw extends JFrame {
+public class CircleDraw extends JFrame {
 	/**
 	 * serialVersionUID
 	 */
@@ -51,12 +51,12 @@ public class GraphicsDraw extends JFrame {
 	 * 
 	 * @param r
 	 */
-	public GraphicsDraw(float r) {
+	public CircleDraw(float r) {
 		super("图形的绘制");
 		setSize((int) r + 200, (int) r + 200);
 		this.setLocation(420, 180);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);// 设置关闭框架的同时结束程序
-		GraphicsDraw.r = r;
+		CircleDraw.r = r;
 		setVisible(true);
 	}
 

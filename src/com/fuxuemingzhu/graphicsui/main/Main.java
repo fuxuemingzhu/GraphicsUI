@@ -19,13 +19,12 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
 
-import com.fuxuemingzhu.graphicsui.alerts.GraphicsDraw;
-import com.fuxuemingzhu.graphicsui.alerts.ShowAnswerAlert;
-import com.fuxuemingzhu.graphicsui.io.AnswerIO;
+import com.fuxuemingzhu.graphicsui.frames.CicleFrame;
+import com.fuxuemingzhu.graphicsui.frames.PentagonFrame;
+import com.fuxuemingzhu.graphicsui.frames.SquareFrame;
+import com.fuxuemingzhu.graphicsui.frames.TriangleFrame;
 
 /**
  * <p>
@@ -58,22 +57,21 @@ public class Main extends JFrame {
 	 */
 	public JLabel lbl_help;
 	/**
-	 * lbl_input 路径提示
+	 * btn_circle 确定按键
 	 */
-	public JLabel lbl_input;
+	public JButton btn_circle;
 	/**
-	 * txt_input 文本路径输入
+	 * btn_pentagon 重置按键
 	 */
-	public JTextField txt_input;
+	public JButton btn_pentagon;
 	/**
-	 * btn_sub 确定按键
+	 * btn_circle 确定按键
 	 */
-	public JButton btn_sub;
+	public JButton btn_square;
 	/**
-	 * btn_reset 重置按键
+	 * btn_pentagon 重置按键
 	 */
-	public JButton btn_reset;
-
+	public JButton btn_triangle;
 	/**
 	 * path 文件路径字符串
 	 */
@@ -95,10 +93,10 @@ public class Main extends JFrame {
 	public Main() {
 		pnl_mian = new JPanel();
 		lbl_help = new JLabel();
-		lbl_input = new JLabel();
-		txt_input = new JTextField();
-		btn_sub = new JButton();
-		btn_reset = new JButton();
+		btn_circle = new JButton();
+		btn_pentagon = new JButton();
+		btn_square = new JButton();
+		btn_triangle = new JButton();
 		userInit();
 	}
 
@@ -119,42 +117,85 @@ public class Main extends JFrame {
 		this.setTitle("图形属性计算与绘制");// 设置框架标题
 		this.pnl_mian.setLayout(null);// 设置面板布局管理
 		this.pnl_mian.setBackground(Color.cyan);// 设置面板背景颜色
-		this.lbl_help.setText("图形属性计算与绘制");// 设置标签标题
+		this.lbl_help.setText("请选择需要计算的图形");// 设置标签标题
 		this.lbl_help.setFont(new Font("宋体", Font.BOLD | Font.ITALIC, 14));// 设置标签字体
 		this.lbl_help.setForeground(Color.RED);// 设置标签字体颜色
-		this.lbl_input.setText("圆的半径:");
-		this.btn_sub.setText("确定");
-		this.btn_reset.setText("重置");
+		this.btn_circle.setText("圆");
+		this.btn_pentagon.setText("正五边形");
+		this.btn_square.setText("正方形");
+		this.btn_triangle.setText("三角形");
 		this.lbl_help.setBounds(120, 40, 150, 20);// 设置标签x坐标120,y坐标20,长60,宽20
-		this.lbl_input.setBounds(50, 100, 60, 20);
-		this.txt_input.setBounds(110, 100, 200, 20);
-		this.btn_sub.setBounds(105, 160, 60, 20);
-		this.btn_sub.addActionListener(new ActionListener()// 匿名类实现ActionListener接口
+		this.btn_circle.setBounds(60, 100, 120, 20);
+		this.btn_pentagon.setBounds(60, 160, 120, 20);
+		this.btn_square.setBounds(200, 100, 120, 20);
+		this.btn_triangle.setBounds(200, 160, 120, 20);
+		this.btn_circle.addActionListener(new ActionListener()// 匿名类实现ActionListener接口
 				{
 					public void actionPerformed(ActionEvent e) {
-						btnsub_ActionEvent(e);
+						btn_circle_Action(e);
 					}
 				});
-		this.btn_reset.setBounds(195, 160, 60, 20);
-		this.btn_reset.addActionListener(new ActionListener()// 匿名类实现ActionListener接口
+		this.btn_pentagon.addActionListener(new ActionListener()// 匿名类实现ActionListener接口
 				{
 					public void actionPerformed(ActionEvent e) {
-						btnreset_ActionEvent(e);
+						btn_pentagon_Action(e);
+					}
+				});
+		this.btn_square.addActionListener(new ActionListener()// 匿名类实现ActionListener接口
+				{
+					public void actionPerformed(ActionEvent e) {
+						btn_square_Action(e);
+					}
+				});
+		this.btn_triangle.addActionListener(new ActionListener()// 匿名类实现ActionListener接口
+				{
+					public void actionPerformed(ActionEvent e) {
+						btn_triangle_Action(e);
 					}
 				});
 		this.pnl_mian.add(lbl_help);// 加载标签到面板
-		this.pnl_mian.add(lbl_input);
-		this.pnl_mian.add(txt_input);
-		this.pnl_mian.add(btn_sub);
-		this.pnl_mian.add(btn_reset);
+		this.pnl_mian.add(btn_circle);
+		this.pnl_mian.add(btn_pentagon);
+		this.pnl_mian.add(btn_square);
+		this.pnl_mian.add(btn_triangle);
 		this.add(pnl_mian);// 加载面板到框架
-		this.getRootPane().setDefaultButton(btn_sub);// 设置缺省按钮
+		this.getRootPane().setDefaultButton(btn_circle);// 设置缺省按钮
 		this.setVisible(true);// 设置框架可显
 	}
 
 	/**
 	 * <p>
-	 * Title: btnsub_ActionEvent
+	 * Title: btn_triangle_Action
+	 * </p>
+	 * <p>
+	 * Description:
+	 * </p>
+	 * 
+	 * @param e
+	 * 
+	 */
+	protected void btn_triangle_Action(ActionEvent e) {
+		TriangleFrame triangleFrame = new TriangleFrame();
+	}
+
+	/**
+	 * <p>
+	 * Title: btn_square_Action
+	 * </p>
+	 * <p>
+	 * Description:
+	 * </p>
+	 * 
+	 * @param e
+	 * 
+	 */
+	protected void btn_square_Action(ActionEvent e) {
+		SquareFrame squareFrame = new SquareFrame();
+	}
+
+	/**
+	 * <p>
+	 * Title: btn_circle_Action
 	 * </p>
 	 * <p>
 	 * Description:点击确定键的操作
@@ -163,31 +204,13 @@ public class Main extends JFrame {
 	 * @param e
 	 * 
 	 */
-	public void btnsub_ActionEvent(ActionEvent e) {
-		txt_r = txt_input.getText();
-		if (txt_r.equals("")) {
-			JOptionPane.showMessageDialog(null, "图形的半径不能为空！", "错误",
-					JOptionPane.ERROR_MESSAGE);
-			return;
-		} else {
-			ShowAnswerAlert showAnswerAlert = new ShowAnswerAlert(
-					Float.parseFloat(txt_r));// 构造结果显示框
-			GraphicsDraw graphicsDraw = new GraphicsDraw(
-					Float.parseFloat(txt_r));// 构造图形绘制框
-			AnswerIO answerIO = new AnswerIO(path, Float.parseFloat(txt_r));
-			// /////////////////构造结果输出
-			try {
-				answerIO.writeFile();
-			} catch (Exception e1) {
-				System.err.println("文件存储错误！");
-				e1.printStackTrace();
-			}
-		}
+	public void btn_circle_Action(ActionEvent e) {
+		CicleFrame cicleFrame = new CicleFrame();
 	}
 
 	/**
 	 * <p>
-	 * Title: btnreset_ActionEvent
+	 * Title: btn_pentagon_Action
 	 * </p>
 	 * <p>
 	 * Description:点击重置键的操作
@@ -196,9 +219,8 @@ public class Main extends JFrame {
 	 * @param e
 	 * 
 	 */
-	public void btnreset_ActionEvent(ActionEvent e) {
-		txt_input.setText("");
-
+	public void btn_pentagon_Action(ActionEvent e) {
+		PentagonFrame pentagonFrame = new PentagonFrame();
 	}
 
 	/**
