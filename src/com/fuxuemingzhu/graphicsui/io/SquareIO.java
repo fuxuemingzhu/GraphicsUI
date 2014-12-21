@@ -59,8 +59,8 @@ public class SquareIO {
 	 */
 	public SquareIO(String path, float r) {
 		super();
-		CircleIO.path = path;
-		CircleIO.r = r;
+		SquareIO.path = path;
+		SquareIO.r = r;
 		square = new Square(r);
 	}
 

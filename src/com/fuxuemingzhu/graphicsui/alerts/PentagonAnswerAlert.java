@@ -155,11 +155,11 @@ public class PentagonAnswerAlert extends JFrame {
 		this.lbl_r.setBounds(50, 50, 100, 20);
 		this.lbl_lenth.setBounds(50, 80, 100, 20);
 		this.lbl_size.setBounds(50, 110, 100, 25);
-		this.txt_r.setBounds(130, 50, 200, 20);
+		this.txt_r.setBounds(150, 50, 200, 20);
 		this.txt_r.setText(pentagon.getA() + "");
-		this.txt_lenth.setBounds(130, 80, 200, 20);
+		this.txt_lenth.setBounds(150, 80, 200, 20);
 		this.txt_lenth.setText(pentagon.calculateLenth() + "");
-		this.txt_size.setBounds(130, 110, 200, 20);
+		this.txt_size.setBounds(150, 110, 200, 20);
 		this.txt_size.setText(pentagon.calculateSize() + "");
 		this.btn_sub.setBounds(120, 160, 90, 20);
 		this.btn_sub.addActionListener(new ActionListener()// 匿名类实现ActionListener接口

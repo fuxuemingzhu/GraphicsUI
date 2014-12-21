@@ -59,8 +59,8 @@ public class PentagonIO {
 	 */
 	public PentagonIO(String path, float r) {
 		super();
-		CircleIO.path = path;
-		CircleIO.r = r;
+		PentagonIO.path = path;
+		PentagonIO.r = r;
 		pentagon = new Pentagon(r);
 	}
 

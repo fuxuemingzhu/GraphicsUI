@@ -77,7 +77,7 @@ public class CicleFrame extends JFrame {
 	/**
 	 * path 文件路径字符串
 	 */
-	public static String path = new String("E:/学习/java/result.txt");
+	public static String path = new String("E:/学习/java/circle.txt");
 
 	/**
 	 * txt_r 圆的半径
@@ -172,8 +172,7 @@ public class CicleFrame extends JFrame {
 		} else {
 			CircleAnswerAlert circleAnswerAlert = new CircleAnswerAlert(
 					Float.parseFloat(txt_r));// 构造结果显示框
-			CircleDraw circleDraw = new CircleDraw(
-					Float.parseFloat(txt_r));// 构造图形绘制框
+			CircleDraw circleDraw = new CircleDraw(Float.parseFloat(txt_r));// 构造图形绘制框
 			CircleIO circleIO = new CircleIO(path, Float.parseFloat(txt_r));
 			// /////////////////构造结果输出
 			try {

@@ -66,7 +66,7 @@ public class TriangleIO {
 	 */
 	public TriangleIO(String path, float a, float b, float c) {
 		super();
-		CircleIO.path = path;
+		TriangleIO.path = path;
 		this.a = a;
 		this.b = b;
 		this.c = c;

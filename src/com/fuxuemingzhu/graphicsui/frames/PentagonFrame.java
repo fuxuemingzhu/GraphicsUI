@@ -77,7 +77,7 @@ public class PentagonFrame extends JFrame {
 	/**
 	 * path 文件路径字符串
 	 */
-	public static String path = new String("E:/学习/java/result.txt");
+	public static String path = new String("E:/学习/java/pentagon.txt");
 
 	/**
 	 * txt_r 五边形的边长
