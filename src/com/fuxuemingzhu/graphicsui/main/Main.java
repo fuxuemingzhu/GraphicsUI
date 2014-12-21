@@ -176,6 +176,7 @@ public class Main extends JFrame {
 	 */
 	protected void btn_triangle_Action(ActionEvent e) {
 		TriangleFrame triangleFrame = new TriangleFrame();
+		this.dispose();
 	}
 
 	/**
@@ -191,6 +192,7 @@ public class Main extends JFrame {
 	 */
 	protected void btn_square_Action(ActionEvent e) {
 		SquareFrame squareFrame = new SquareFrame();
+		this.dispose();
 	}
 
 	/**
@@ -206,6 +208,7 @@ public class Main extends JFrame {
 	 */
 	public void btn_circle_Action(ActionEvent e) {
 		CicleFrame cicleFrame = new CicleFrame();
+		this.dispose();
 	}
 
 	/**
@@ -221,6 +224,7 @@ public class Main extends JFrame {
 	 */
 	public void btn_pentagon_Action(ActionEvent e) {
 		PentagonFrame pentagonFrame = new PentagonFrame();
+		this.dispose();
 	}
 
 	/**
